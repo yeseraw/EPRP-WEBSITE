@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethiopian People's Revolutionary Party (EPRP / ኢሕአፓ) | Official Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-paper: #f7f5ef;
+      --bg-surface: #ffffff;
+      --bg-subtle: #efece3;
+      --bg-dark: #0f172a;
+      --bg-dark-elevated: #1e293b;
+      --text-primary: #111827;
+      --text-secondary: #4b5563;
+      --text-muted: #6b7280;
+      --text-inverse: #f8fafc;
+      --eth-green: #0b6e3c;
+      --eth-green-dark: #064e2b;
+      --eth-yellow: #d49b00;
+      --eth-yellow-bright: #f5c42c;
+      --eth-red: #b91c1c;
+      --eth-red-dark: #881313;
+      --border-light: #e2ddd0;
+      --border-dark: rgba(255, 255, 255, 0.14);
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 10px 28px rgba(15, 23, 42, 0.1);
+      --shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.16);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --transition: 0.25s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Sans Ethiopic', sans-serif;
+      background-color: var(--bg-paper);
+      color: var(--text-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .brand-serif {
+      font-family: 'Playfair Display', 'Noto Sans Ethiopic', serif;
+      line-height: 1.22;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .flag-stripe {
+      height: 5px;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        var(--eth-green) 0% 33.33%,
+        var(--eth-yellow-bright) 33.33% 66.66%,
+        var(--eth-red) 66.66% 100%
+      );
+    }
+
+    /* Header & Navigation */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(10px);
+      color: var(--text-inverse);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 74px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: #cbd5e1;
+      letter-spacing: 0.04em;
+    }
+
+    nav.desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    nav.desktop-nav a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #e2e8f0;
+      padding: 6px 2px;
+      border-bottom: 2px solid transparent;
+      transition: var(--transition);
+    }
+
+    nav.desktop-nav a:hover,
+    nav.desktop-nav a.active {
+      color: var(--eth-yellow-bright);
+      border-bottom-color: var(--eth-yellow-bright);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      background: var(--bg-dark-elevated);
+      border: 1px solid var(--border-dark);
+      border-radius: 999px;
+      padding: 3px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: #cbd5e1;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .lang-btn.active {
+      background: var(--eth-yellow-bright);
+      color: #0f172a;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--eth-green);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--eth-green-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-gold {
+      background: var(--eth-yellow-bright);
+      color: #0f172a;
+    }
+
+    .btn-gold:hover {
+      background: #e2b118;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline-light {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    .btn-outline-dark {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-outline-dark:hover {
+      background: var(--bg-subtle);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: var(--bg-dark-elevated);
+      color: #ffffff;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-sm);
+      padding: 8px 11px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .mobile-drawer {
+      display: none;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 16px 20px 22px;
+    }
+
+    .mobile-drawer.open {
+      display: block;
+    }
+
+    .mobile-drawer a {
+      display: block;
+      padding: 10px 4px;
+      color: #f1f5f9;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-drawer-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(212, 155, 0, 0.18), transparent 42%),
+        radial-gradient(circle at 12% 85%, rgba(11, 110, 60, 0.28), transparent 48%),
+        linear-gradient(135deg, #0b1220 0%, #132238 58%, #0d261b 100%);
+      color: var(--text-inverse);
+      padding: 76px 0 68px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.95fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 196, 44, 0.14);
+      border: 1px solid rgba(245, 196, 44, 0.4);
+      color: var(--eth-yellow-bright);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 4.2vw, 3.35rem);
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .hero p.hero-lead {
+      font-size: 1.08rem;
+      color: #dbe4f0;
+      max-width: 620px;
+      margin-bottom: 28px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-card {
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-card-tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--eth-yellow-bright);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hero-card h2 {
+      font-size: 1.45rem;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      font-size: 0.94rem;
+      color: #cbd5e1;
+      margin-bottom: 18px;
+    }
+
+    .tenets-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .tenets-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: #f1f5f9;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    .dot-green { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; margin-top: 7px; flex-shrink: 0; }
+    .dot-gold { width: 9px; height: 9px; border-radius: 50%; background: var(--eth-yellow-bright); margin-top: 7px; flex-shrink: 0; }
+    .dot-red { width: 9px; height: 9px; border-radius: 50%; background: #ef4444; margin-top: 7px; flex-shrink: 0; }
+
+    /* Legacy Strip */
+    .metrics-strip {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-light);
+      padding: 28px 0;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .metric-box {
+      padding: 12px 16px;
+      border-left: 4px solid var(--eth-green);
+    }
+
+    .metric-box:nth-child(2) { border-left-color: var(--eth-yellow); }
+    .metric-box:nth-child(3) { border-left-color: var(--eth-red); }
+    .metric-box:nth-child(4) { border-left-color: var(--bg-dark); }
+
+    .metric-num {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.15;
+    }
+
+    .metric-label {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    /* Section Structure */
+    section.page-section {
+      padding: 76px 0;
+    }
+
+    section.alt-bg {
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin-bottom: 40px;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--eth-green);
+      margin-bottom: 8px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    /* Filter Pills */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .filter-pill {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid #cbd5e1;
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-pill:hover {
+      border-color: var(--eth-green);
+      color: var(--eth-green);
+    }
+
+    .filter-pill.active {
+      background: var(--eth-green);
+      border-color: var(--eth-green);
+      color: #ffffff;
+    }
+
+    /* Policy Cards */
+    .policy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(11, 110, 60, 0.1);
+      color: var(--eth-green-dark);
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+
+    .card p {
+      font-size: 0.94rem;
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+    }
+
+    .text-link {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--eth-green);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .text-link:hover {
+      color: var(--eth-red);
+    }
+
+    /* Timeline */
+    .timeline-tabs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .era-tab {
+      text-align: left;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .era-tab .era-year {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--eth-red);
+      margin-bottom: 4px;
+    }
+
+    .era-tab .era-name {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .era-tab.active {
+      background: var(--bg-dark);
+      border-color: var(--bg-dark);
+    }
+
+    .era-tab.active .era-year {
+      color: var(--eth-yellow-bright);
+    }
+
+    .era-tab.active .era-name {
+      color: #ffffff;
+    }
+
+    .timeline-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-panel h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .timeline-panel p {
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      max-width: 820px;
+    }
+
+    .timeline-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .highlight-item {
+      background: var(--bg-paper);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      font-size: 0.9rem;
+      color: var(--text-primary);
+    }
+
+    /* News & Events */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .news-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .news-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 20px 22px;
+    }
+
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .news-badge {
+      background: rgba(185, 28, 28, 0.1);
+      color: var(--eth-red-dark);
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .event-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .event-date {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--eth-green);
+      margin-bottom: 4px;
+    }
+
+    /* Membership & Civic Engagement Form */
+    .engage-box {
+      background: var(--bg-dark);
+      color: var(--text-inverse);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .engage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    label {
+      display: block;
+      font-size: 0.86rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #e2e8f0;
+    }
+
+    .light-form label {
+      color: var(--text-primary);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 11px 13px;
+      border-radius: var(--radius-sm);
+      border: 1px solid #475569;
+      background: #1e293b;
+      color: #ffffff;
+      font-size: 0.94rem;
+    }
+
+    .light-form input, .light-form select, .light-form textarea {
+      background: #ffffff;
+      color: var(--text-primary);
+      border: 1px solid #cbd5e1;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid var(--eth-yellow-bright);
+      outline-offset: 1px;
+    }
+
+    .status-banner {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      background: rgba(34, 197, 94, 0.16);
+      border: 1px solid rgba(34, 197, 94, 0.45);
+      color: #dcfce7;
+      font-size: 0.9rem;
+    }
+
+    .light-form .status-banner {
+      background: rgba(11, 110, 60, 0.1);
+      border-color: rgba(11, 110, 60, 0.35);
+      color: var(--eth-green-dark);
+    }
+
+    .status-banner.show {
+      display: block;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: #090e1a;
+      color: #cbd5e1;
+      padding: 52px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-col h4 {
+      color: #ffffff;
+      font-size: 0.98rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+
+    .footer-col a:hover {
+      color: var(--eth-yellow-bright);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 20px;
+      font-size: 0.84rem;
+      color: #94a3b8;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.72);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 2000;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      width: 100%;
+      max-width: 600px;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-lg);
+      max-height: 88vh;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .modal-close {
+      background: var(--bg-subtle);
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .policy-grid,
+      .two-col,
+      .engage-grid,
+      .footer-grid,
+      .timeline-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics-grid,
+      .timeline-tabs {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav.desktop-nav,
+      .header-actions .btn {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .metrics-grid,
+      .timeline-tabs,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flag-stripe"></div>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">
+        <svg width="42" height="42" viewBox="0 0 48 48" fill="none" aria-label="EPRP Emblem">
+          <circle cx="24" cy="24" r="22" fill="#0b6e3c" stroke="#f5c42c" stroke-width="2.5" />
+          <polygon points="24,8 28.6,17.8 39.4,19.2 31.5,26.7 33.5,37.4 24,32.2 14.5,37.4 16.5,26.7 8.6,19.2 19.4,17.8" fill="#f5c42c" />
+          <rect x="22.3" y="15" width="3.4" height="17" rx="1.5" fill="#b91c1c" />
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title" data-i18n="brandTitle">EPRP · ኢሕአፓ</span>
+          <span class="brand-sub" data-i18n="brandSub">Ethiopian People's Revolutionary Party</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <a href="#manifesto" data-i18n="navManifesto">2026 Manifesto</a>
+        <a href="#history" data-i18n="navHistory">History</a>
+        <a href="#news-events" data-i18n="navNews">News & Events</a>
+        <a href="#membership" data-i18n="navJoin">Join Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="am">አማርኛ</button>
+        </div>
+        <button type="button" class="btn btn-gold" id="openDonateHeader" data-i18n="supportBtn">Support</button>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+      <a href="#manifesto" data-i18n="navManifesto">2026 Manifesto</a>
+      <a href="#history" data-i18n="navHistory">History</a>
+      <a href="#news-events" data-i18n="navNews">News & Events</a>
+      <a href="#membership" data-i18n="navJoin">Join Us</a>
+      <div class="mobile-drawer-actions">
+        <a href="#membership" class="btn btn-primary" data-i18n="joinCta">Become a Member</a>
+        <button type="button" class="btn btn-gold" id="openDonateMobile" data-i18n="supportBtn">Support</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="hero-badge" data-i18n="heroBadge">Founded 1972 · Democratic Renewal & National Unity</div>
+          <h1 data-i18n="heroTitle">For Constitutional Democracy, Justice, and Shared Prosperity</h1>
+          <p class="hero-lead" data-i18n="heroLead">
+            The Ethiopian People's Revolutionary Party (EPRP / ኢሕአፓ) stands for equal citizenship, peaceful democratic transition, accountable governance, and dignified livelihoods for every Ethiopian at home and in the diaspora.
+          </p>
+          <div class="hero-ctas">
+            <a href="#membership" class="btn btn-gold" data-i18n="joinCta">Become a Member</a>
+            <a href="#manifesto" class="btn btn-outline-light" data-i18n="readManifesto">Explore 2026 Platform</a>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-tag" data-i18n="cardTag">Core Commitments</div>
+          <h2 data-i18n="cardTitle">Pillars of Our Civic Vision</h2>
+          <p data-i18n="cardDesc">Grounded in historic sacrifice and forward-looking reform, our program centers on citizens' rights and institutional rule of law.</p>
+          <ul class="tenets-list">
+            <li>
+              <span class="dot-green"></span>
+              <span data-i18n="tenet1"><strong>Equal Citizenship:</strong> Full civil liberties, free expression, and equal protection under the law across all regions.</span>
+            </li>
+            <li>
+              <span class="dot-gold"></span>
+              <span data-i18n="tenet2"><strong>Inclusive Economy:</strong> Fair job creation, agricultural modernization, energy security, and transparent public finance.</span>
+            </li>
+            <li>
+              <span class="dot-red"></span>
+              <span data-i18n="tenet3"><strong>Lasting Peace:</strong> Inclusive national dialogue, transitional justice, and independent democratic institutions.</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Metrics Strip -->
+    <section class="metrics-strip">
+      <div class="container metrics-grid">
+        <div class="metric-box">
+          <div class="metric-num">1972</div>
+          <div class="metric-label" data-i18n="stat1">Year of Party Founding</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-num">5+</div>
+          <div class="metric-label" data-i18n="stat2">Core Policy Pillars for 2026</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-num">EN / አማ</div>
+          <div class="metric-label" data-i18n="stat3">Bilingual Civic & Policy Outreach</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-num">100%</div>
+          <div class="metric-label" data-i18n="stat4">Commitment to Rule of Law & Peace</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2026 Manifesto & Policy Platform -->
+    <section id="manifesto" class="page-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker" data-i18n="manifestoKicker">Policy Platform</span>
+          <h2 data-i18n="manifestoTitle">2026 Manifesto & Reform Agenda</h2>
+          <p data-i18n="manifestoSub">Filter our policy pillars by focus area and open any brief to read detailed commitments.</p>
+        </div>
+
+        <div class="filter-bar" id="policyFilters">
+          <button type="button" class="filter-pill active" data-filter="all" data-i18n="filterAll">All Pillars</button>
+          <button type="button" class="filter-pill" data-filter="governance" data-i18n="filterGov">Governance</button>
+          <button type="button" class="filter-pill" data-filter="economy" data-i18n="filterEcon">Economy & Energy</button>
+          <button type="button" class="filter-pill" data-filter="social" data-i18n="filterSocial">Education & Health</button>
+          <button type="button" class="filter-pill" data-filter="peace" data-i18n="filterPeace">Peace & Diplomacy</button>
+        </div>
+
+        <div class="policy-grid" id="policyGrid"></div>
+      </div>
+    </section>
+
+    <!-- Historical Timeline -->
+    <section id="history" class="page-section alt-bg">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker" data-i18n="historyKicker">Historical Journey</span>
+          <h2 data-i18n="historyTitle">Struggle, Sacrifice, and Democratic Continuity</h2>
+          <p data-i18n="historySub">Select an era below to review milestones from EPRP's founding through contemporary democratic organizing.</p>
+        </div>
+
+        <div class="timeline-tabs" id="timelineTabs"></div>
+        <div class="timeline-panel" id="timelinePanel"></div>
+      </div>
+    </section>
+
+    <!-- News, Events RSVP & Civic Contribution -->
+    <section id="news-events" class="page-section">
+      <div class="container two-col">
+        <div>
+          <div class="section-header" style="margin-bottom: 24px;">
+            <span class="section-kicker" data-i18n="newsKicker">Statements & Dispatches</span>
+            <h2 data-i18n="newsTitle">Latest News & Communiqués</h2>
+          </div>
+
+          <div class="filter-bar" id="newsFilters">
+            <button type="button" class="filter-pill active" data-news-filter="all" data-i18n="newsAll">All Updates</button>
+            <button type="button" class="filter-pill" data-news-filter="statement" data-i18n="newsStatement">Statements</button>
+            <button type="button" class="filter-pill" data-news-filter="policy" data-i18n="newsPolicy">Policy Briefs</button>
+          </div>
+
+          <div class="news-list" id="newsList"></div>
+        </div>
+
+        <div>
+          <div class="section-header" style="margin-bottom: 24px;">
+            <span class="section-kicker" data-i18n="eventsKicker">Civic Forums</span>
+            <h2 data-i18n="eventsTitle">Upcoming Town Halls & RSVP</h2>
+          </div>
+
+          <div class="event-card">
+            <div class="event-date" data-i18n="event1Date">December 12, 2026 · Hybrid (Addis Ababa & Online)</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 6px;" data-i18n="event1Title">National Youth & Civic Dialogue on Democratic Institutions</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px;" data-i18n="event1Desc">An open forum on electoral credibility, local governance accountability, and youth participation.</p>
+            <button type="button" class="btn btn-primary rsvp-btn" data-event="National Youth & Civic Dialogue (Dec 12, 2026)" data-i18n="rsvpBtn">RSVP for Event</button>
+          </div>
+
+          <div class="event-card">
+            <div class="event-date" data-i18n="event2Date">January 18, 2027 · Diaspora & Regional Forum</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 6px;" data-i18n="event2Title">Sustainable Energy, Jobs & Reconstruction Roundtable</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px;" data-i18n="event2Desc">Discussing clean energy access, agro-processing, and community rebuilding across regions.</p>
+            <button type="button" class="btn btn-outline-dark rsvp-btn" data-event="Sustainable Energy & Reconstruction Roundtable (Jan 18, 2027)" data-i18n="rsvpBtn">RSVP for Event</button>
+          </div>
+
+          <div class="event-card light-form" id="rsvpBox" style="display: none; border-color: var(--eth-green);">
+            <h3 style="font-size: 1.1rem; margin-bottom: 10px;" data-i18n="rsvpFormTitle">Event Registration</h3>
+            <form id="rsvpForm">
+              <div class="form-group">
+                <label for="rsvpEventName" data-i18n="rsvpEventLabel">Selected Event</label>
+                <input type="text" id="rsvpEventName" readonly />
+              </div>
+              <div class="form-group">
+                <label for="rsvpName" data-i18n="fieldName">Full Name</label>
+                <input type="text" id="rsvpName" required placeholder="Your full name" />
+              </div>
+              <div class="form-group">
+                <label for="rsvpContact" data-i18n="fieldEmail">Email or Phone</label>
+                <input type="text" id="rsvpContact" required placeholder="name@example.com or +251..." />
+              </div>
+              <button type="submit" class="btn btn-primary" data-i18n="rsvpSubmit">Confirm RSVP</button>
+              <div class="status-banner" id="rsvpStatus"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership & Volunteer Portal -->
+    <section id="membership" class="page-section alt-bg">
+      <div class="container">
+        <div class="engage-box">
+          <div class="engage-grid">
+            <div>
+              <span class="section-kicker" style="color: var(--eth-yellow-bright);" data-i18n="joinKicker">Stand With Us</span>
+              <h2 style="color: #ffffff; font-size: clamp(1.75rem, 3vw, 2.35rem); margin-bottom: 14px;" data-i18n="joinTitle">Join the Movement or Volunteer</h2>
+              <p style="color: #cbd5e1; margin-bottom: 20px;" data-i18n="joinDesc">
+                Building a durable democracy requires principled citizens, policy researchers, community organizers, and volunteers across every region and abroad.
+              </p>
+              <ul class="tenets-list">
+                <li>
+                  <span class="dot-gold"></span>
+                  <span data-i18n="joinBullet1">Policy working groups in economics, law, education, healthcare, and energy.</span>
+                </li>
+                <li>
+                  <span class="dot-green"></span>
+                  <span data-i18n="joinBullet2">Local chapter organizing, civic education, and bilingual translation support.</span>
+                </li>
+              </ul>
+            </div>
+
+            <form id="membershipForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="memberName" data-i18n="fieldName">Full Name</label>
+                  <input type="text" id="memberName" required placeholder="Full name" />
+                </div>
+                <div class="form-group">
+                  <label for="memberEmail" data-i18n="fieldEmail">Email Address</label>
+                  <input type="email" id="memberEmail" required placeholder="you@example.com" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="memberRegion" data-i18n="fieldRegion">Region / City / Diaspora</label>
+                  <input type="text" id="memberRegion" required placeholder="e.g., Addis Ababa, Amhara, Oromia, Diaspora" />
+                </div>
+                <div class="form-group">
+                  <label for="memberRole" data-i18n="fieldRole">Area of Interest</label>
+                  <select id="memberRole">
+                    <option value="Member" data-i18n="roleMember">Party Membership</option>
+                    <option value="Policy" data-i18n="rolePolicy">Policy & Research</option>
+                    <option value="Organizing" data-i18n="roleOrganizing">Community Organizing</option>
+                    <option value="Media" data-i18n="roleMedia">Communications & Translation</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="memberNotes" data-i18n="fieldNotes">Message or Skills (Optional)</label>
+                <textarea id="memberNotes" rows="3" placeholder="Share how you would like to contribute..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-gold" data-i18n="submitJoin">Submit Application</button>
+              <div class="status-banner" id="memberStatus"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="brandTitle">EPRP · ኢሕአፓ</h4>
+          <p style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 12px;" data-i18n="footerAbout">
+            Ethiopian People's Revolutionary Party — committed to constitutional rule, equal citizenship, social justice, and peaceful democratic renewal.
+          </p>
+          <button type="button" class="btn btn-outline-light" id="openDonateFooter" data-i18n="supportBtn">Support</button>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerNav">Navigation</h4>
+          <ul>
+            <li><a href="#manifesto" data-i18n="navManifesto">2026 Manifesto</a></li>
+            <li><a href="#history" data-i18n="navHistory">History</a></li>
+            <li><a href="#news-events" data-i18n="navNews">News & Events</a></li>
+            <li><a href="#membership" data-i18n="navJoin">Join Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footerContact">Civic Desk</h4>
+          <ul>
+            <li data-i18n="footerEmail">Email: contact@eprp-portal.org</li>
+            <li data-i18n="footerLang">Languages: English & አማርኛ (Amharic)</li>
+            <li data-i18n="footerNote">Update official chapter contacts prior to public launch.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="copyright">© 2026 Ethiopian People's Revolutionary Party (EPRP / ኢሕአፓ). All rights reserved.</span>
+        <span data-i18n="tagline">Freedom · Equality · Justice</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Policy Brief & Contribution Modal -->
+  <div class="modal-backdrop" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle" style="font-size: 1.35rem;"></h3>
+        <button type="button" class="modal-close" id="closeModal" aria-label="Close Modal">✕</button>
+      </div>
+      <div id="modalBody" style="color: var(--text-secondary); font-size: 0.95rem;"></div>
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        brandTitle: "EPRP · ኢሕአፓ",
+        brandSub: "Ethiopian People's Revolutionary Party",
+        navManifesto: "2026 Manifesto",
+        navHistory: "History",
+        navNews: "News & Events",
+        navJoin: "Join Us",
+        supportBtn: "Support",
+        joinCta: "Become a Member",
+        readManifesto: "Explore 2026 Platform",
+        heroBadge: "Founded 1972 · Democratic Renewal & National Unity",
+        heroTitle: "For Constitutional Democracy, Justice, and Shared Prosperity",
+        heroLead: "The Ethiopian People's Revolutionary Party (EPRP / ኢሕአፓ) stands for equal citizenship, peaceful democratic transition, accountable governance, and dignified livelihoods for every Ethiopian at home and in the diaspora.",
+        cardTag: "Core Commitments",
+        cardTitle: "Pillars of Our Civic Vision",
+        cardDesc: "Grounded in historic sacrifice and forward-looking reform, our program centers on citizens' rights and institutional rule of law.",
+        tenet1: "<strong>Equal Citizenship:</strong> Full civil liberties, free expression, and equal protection under the law across all regions.",
+        tenet2: "<strong>Inclusive Economy:</strong> Fair job creation, agricultural modernization, energy security, and transparent public finance.",
+        tenet3: "<strong>Lasting Peace:</strong> Inclusive national dialogue, transitional justice, and independent democratic institutions.",
+        stat1: "Year of Party Founding",
+        stat2: "Core Policy Pillars for 2026",
+        stat3: "Bilingual Civic & Policy Outreach",
+        stat4: "Commitment to Rule of Law & Peace",
+        manifestoKicker: "Policy Platform",
+        manifestoTitle: "2026 Manifesto & Reform Agenda",
+        manifestoSub: "Filter our policy pillars by focus area and open any brief to read detailed commitments.",
+        filterAll: "All Pillars",
+        filterGov: "Governance",
+        filterEcon: "Economy & Energy",
+        filterSocial: "Education & Health",
+        filterPeace: "Peace & Diplomacy",
+        readBrief: "Read Policy Brief →",
+        historyKicker: "Historical Journey",
+        historyTitle: "Struggle, Sacrifice, and Democratic Continuity",
+        historySub: "Select an era below to review milestones from EPRP's founding through contemporary democratic organizing.",
+        newsKicker: "Statements & Dispatches",
+        newsTitle: "Latest News & Communiqués",
+        newsAll: "All Updates",
+        newsStatement: "Statements",
+        newsPolicy: "Policy Briefs",
+        eventsKicker: "Civic Forums",
+        eventsTitle: "Upcoming Town Halls & RSVP",
+        event1Date: "December 12, 2026 · Hybrid (Addis Ababa & Online)",
+        event1Title: "National Youth & Civic Dialogue on Democratic Institutions",
+        event1Desc: "An open forum on electoral credibility, local governance accountability, and youth participation.",
+        event2Date: "January 18, 2027 · Diaspora & Regional Forum",
+        event2Title: "Sustainable Energy, Jobs & Reconstruction Roundtable",
+        event2Desc: "Discussing clean energy access, agro-processing, and community rebuilding across regions.",
+        rsvpBtn: "RSVP for Event",
+        rsvpFormTitle: "Event Registration",
+        rsvpEventLabel: "Selected Event",
+        fieldName: "Full Name",
+        fieldEmail: "Email or Phone",
+        rsvpSubmit: "Confirm RSVP",
+        joinKicker: "Stand With Us",
+        joinTitle: "Join the Movement or Volunteer",
+        joinDesc: "Building a durable democracy requires principled citizens, policy researchers, community organizers, and volunteers across every region and abroad.",
+        joinBullet1: "Policy working groups in economics, law, education, healthcare, and energy.",
+        joinBullet2: "Local chapter organizing, civic education, and bilingual translation support.",
+        fieldRegion: "Region / City / Diaspora",
+        fieldRole: "Area of Interest",
+        roleMember: "Party Membership",
+        rolePolicy: "Policy & Research",
+        roleOrganizing: "Community Organizing",
+        roleMedia: "Communications & Translation",
+        fieldNotes: "Message or Skills (Optional)",
+        submitJoin: "Submit Application",
+        footerAbout: "Ethiopian People's Revolutionary Party — committed to constitutional rule, equal citizenship, social justice, and peaceful democratic renewal.",
+        footerNav: "Navigation",
+        footerContact: "Civic Desk",
+        footerEmail: "Email: contact@eprp-portal.org",
+        footerLang: "Languages: English & አማርኛ (Amharic)",
+        footerNote: "Update official chapter contacts prior to public launch.",
+        copyright: "© 2026 Ethiopian People's Revolutionary Party (EPRP / ኢሕአፓ). All rights reserved.",
+        tagline: "Freedom · Equality · Justice"
+      },
+      am: {
+        brandTitle: "ኢሕአፓ · EPRP",
+        brandSub: "የኢትዮጵያ ሕዝባዊ አብዮታዊ ፓርቲ",
+        navManifesto: "የ2026 ማኒፌስቶ",
+        navHistory: "ታሪክ",
+        navNews: "ዜና እና መድረኮች",
+        navJoin: "ይቀላቀሉን",
+        supportBtn: "ድጋፍ",
+        joinCta: "አባል ይሁኑ",
+        readManifesto: "የ2026 ፕሮግራም ይመልከቱ",
+        heroBadge: "የተመሠረተው 1964/1972 · ለዴሞክራሲያዊ ታዳሽነት እና ለብሔራዊ አንድነት",
+        heroTitle: "ለሕገ-መንግሥታዊ ዴሞክራሲ፣ ለፍትሕ እና ለጋራ ብልጽግና",
+        heroLead: "የኢትዮጵያ ሕዝባዊ አብዮታዊ ፓርቲ (ኢሕአፓ / EPRP) ለእኩል ዜግነት፣ ለሰላማዊ ዴሞክራሲያዊ ሽግግር፣ ለተጠያቂ አስተዳደር እና በሀገር ውስጥም በውጭም ለሚኖሩ ኢትዮጵያውያን ክቡር ኑሮ ይቆማል።",
+        cardTag: "ዋና መርሆዎች",
+        cardTitle: "የሕዝባዊ ራዕያችን ምሰሶዎች",
+        cardDesc: "በታሪካዊ መስዋዕትነት እና በወቅታዊ ማሻሻያ የተመሠረተ መርሃ ግብራችን በዜጎች መብት እና በሕግ የበላይነት ላይ ያተኩራል።",
+        tenet1: "<strong>እኩል ዜግነት፡</strong> በሁሉም ክልሎች የተሟላ ሰብአዊና ዴሞክራሲያዊ መብቶች፣ የሐሳብ ነፃነት እና እኩል የሕግ ጥበቃ።",
+        tenet2: "<strong>አካታች ኢኮኖሚ፡</strong> የሥራ ዕድል ፈጠራ፣ የግብርና ዘመናዊነት፣ የኃይል አቅርቦት ደህንነት እና ግልጽ የሕዝብ ሀብት አስተዳደር።",
+        tenet3: "<strong>ዘላቂ ሰላም፡</strong> አካታች ብሔራዊ ውይይት፣ የሽግግር ፍትሕ እና ነፃ የዴሞክራሲ ተቋማት።",
+        stat1: "የፓርቲው ምሥረታ ዓመት (እ.ኤ.አ.)",
+        stat2: "የ2026 ዋና የፖሊሲ ምሰሶዎች",
+        stat3: "የሁለት ቋንቋ (EN / አማ) ግንኙነት",
+        stat4: "ለሕግ የበላይነት እና ለሰላም ያለ ቁርጠኝነት",
+        manifestoKicker: "የፖሊሲ መርሃ ግብር",
+        manifestoTitle: "የ2026 ማኒፌስቶ እና የማሻሻያ አጀንዳ",
+        manifestoSub: "የፖሊሲ ምሰሶዎቻችንን በዘርፍ ይምረጡ እና ዝርዝር ሐሳቦችን ለማንበብ ይክፈቱ።",
+        filterAll: "ሁሉም ምሰሶዎች",
+        filterGov: "አስተዳደር እና ሕግ",
+        filterEcon: "ኢኮኖሚ እና ኃይል",
+        filterSocial: "ትምህርት እና ጤና",
+        filterPeace: "ሰላም እና ዲፕሎማሲ",
+        readBrief: "ዝርዝር ማብራሪያ ያንብቡ →",
+        historyKicker: "ታሪካዊ ጉዞ",
+        historyTitle: "ትግል፣ መስዋዕትነት እና የዴሞክራሲ ቀጣይነት",
+        historySub: "ከምሥረታ እስከ ወቅታዊ ዴሞክራሲያዊ እንቅስቃሴ ያሉ ወቅቶችን ለመመልከት ከታች ያሉትን ዘመናት ይምረጡ።",
+        newsKicker: "መግለጫዎች እና ዜናዎች",
+        newsTitle: "ወቅታዊ ዜናዎች እና መግለጫዎች",
+        newsAll: "ሁሉም",
+        newsStatement: "መግለጫዎች",
+        newsPolicy: "የፖሊሲ ማስታወሻዎች",
+        eventsKicker: "ሕዝባዊ ውይይቶች",
+        eventsTitle: "ቀጣይ የውይይት መድረኮች እና ምዝገባ",
+        event1Date: "ታኅሣሥ 3 ቀን 2019 ዓ.ም. (Dec 12, 2026) · በአካል እና በኦንላይን",
+        event1Title: "ብሔራዊ የወጣቶች እና የሲቪክ ተቋማት የዴሞክራሲ ውይይት",
+        event1Desc: "በምርጫ ተአማኒነት፣ በአካባቢ አስተዳደር ተጠያቂነት እና በወጣቶች ተሳትፎ ላይ የሚያተኩር ክፍት መድረክ።",
+        event2Date: "ጥር 10 ቀን 2019 ዓ.ም. (Jan 18, 2027) · የዳያስፖራ እና የክልል መድረክ",
+        event2Title: "ዘላቂ ኃይል፣ ሥራ ፈጠራ እና የመልሶ ግንባታ ምክክር",
+        event2Desc: "የንጹሕ ኃይል ተደራሽነት፣ የግብርና ማቀነባበሪያ እና የማኅበረሰብ መልሶ ግንባታ ላይ ያተኮረ ውይይት።",
+        rsvpBtn: "ለመድረኩ ይመዝገቡ",
+        rsvpFormTitle: "የመድረክ ምዝገባ",
+        rsvpEventLabel: "የተመረጠ መድረክ",
+        fieldName: "ሙሉ ስም",
+        fieldEmail: "ኢሜይል ወይም ስልክ",
+        rsvpSubmit: "ምዝገባ ያረጋግጡ",
+        joinKicker: "ከእኛ ጋር ይቁሙ",
+        joinTitle: "አባል ይሁኑ ወይም በበጎ ፈቃድ ያገልግሉ",
+        joinDesc: "ጠንካራ ዴሞክራሲ ለመገንባት በሁሉም አካባቢዎች እና በውጭ የሚገኙ ዜጎች፣ የፖሊሲ ተመራማሪዎች፣ አደራጆች እና በጎ ፈቃደኞች ተሳትፎ ወሳኝ ነው።",
+        joinBullet1: "በኢኮኖሚ፣ በሕግ፣ በትምህርት፣ በጤና እና በኃይል የፖሊሲ የሥራ ቡድኖች።",
+        joinBullet2: "የአካባቢ ቅርንጫፍ አደረጃጀት፣ የዜግነት ትምህርት እና የትርጉም ድጋፍ።",
+        fieldRegion: "ክልል / ከተማ / ዳያስፖራ",
+        fieldRole: "የተሳትፎ ዘርፍ",
+        roleMember: "የፓርቲ አባልነት",
+        rolePolicy: "ፖሊሲ እና ጥናት",
+        roleOrganizing: "ማኅበረሰባዊ አደረጃጀት",
+        roleMedia: "ግንኙነት እና ትርጉም",
+        fieldNotes: "መልዕክት ወይም ችሎታ (አማራጭ)",
+        submitJoin: "ማመልከቻ ያስገቡ",
+        footerAbout: "የኢትዮጵያ ሕዝባዊ አብዮታዊ ፓርቲ — ለሕገ-መንግሥታዊ ሥርዓት፣ ለእኩል ዜግነት፣ ለማኅበራዊ ፍትሕ እና ለሰላማዊ ዴሞክራሲያዊ ታዳሽነት ይሠራል።",
+        footerNav: "ማውጫ",
+        footerContact: "የግንኙነት ማዕከል",
+        footerEmail: "ኢሜይል: contact@eprp-portal.org",
+        footerLang: "ቋንቋዎች: እንግሊዝኛ እና አማርኛ",
+        footerNote: "ከይፋዊ ስርጭት በፊት የቅርንጫፍ አድራሻዎችን ያዘምኑ።",
+        copyright: "© 2026 የኢትዮጵያ ሕዝባዊ አብዮታዊ ፓርቲ (ኢሕአፓ / EPRP)። መብቱ በሕግ የተጠበቀ ነው።",
+        tagline: "ነፃነት · እኩልነት · ፍትሕ"
+      }
+    };
+
+    const policies = [
+      {
+        id: "gov",
+        category: "governance",
+        tagEn: "Governance",
+        tagAm: "አስተዳደር እና ሕግ",
+        titleEn: "Rule of Law & Independent Institutions",
+        titleAm: "የሕግ የበላይነት እና ነፃ ተቋማት",
+        summaryEn: "Strengthening judicial independence, electoral integrity, press freedom, and transparent local councils.",
+        summaryAm: "የፍርድ ቤቶች ነፃነት፣ የምርጫ ተአማኒነት፣ የፕሬስ ነፃነት እና ግልጽ የአካባቢ ምክር ቤቶችን ማጠናከር።",
+        detailEn: "EPRP advocates constitutional reforms that separate partisan politics from the judiciary, security forces, and electoral administration, while protecting civil society and independent media.",
+        detailAm: "ኢሕአፓ ፍርድ ቤቶችን፣ የጸጥታ ኃይሎችን እና የምርጫ አስተዳደርን ከፓርቲ ወገንተኝነት የሚያላቅቁ፣ እንዲሁም የሲቪል ማኅበረሰብ እና የነፃ መገናኛ ብዙኃን ደህንነትን የሚያረጋግጡ ሕገ-መንግሥታዊ ማሻሻያዎችን ይደግፋል።"
+      },
+      {
+        id: "econ",
+        category: "economy",
+        tagEn: "Economy & Energy",
+        tagAm: "ኢኮኖሚ እና ኃይል",
+        titleEn: "Inclusive Growth & Energy Security",
+        titleAm: "አካታች ዕድገት እና የኃይል ደህንነት",
+        summaryEn: "Supporting smallholder farmers, domestic manufacturing, renewable energy expansion, and fair taxation.",
+        summaryAm: "አነስተኛ አርሶ አደሮችን፣ የሀገር ውስጥ ማኑፋክቸሪንግን፣ የታዳሽ ኃይል መስፋፋትን እና ፍትሐዊ ግብርን መደገፍ።",
+        detailEn: "Our economic framework prioritizes affordable electricity and clean energy solutions, rural infrastructure, value-added agriculture, and dignified youth employment without predatory monopolies.",
+        detailAm: "የኢኮኖሚ ማዕቀፋችን ተመጣጣኝ የኤሌክትሪክ እና የንጹሕ ኃይል መፍትሔዎችን፣ የገጠር መሠረተ ልማትን፣ የግብርና እሴት ጭማሪን እና ክቡር የወጣት ሥራ ዕድልን ቅድሚያ ይሰጣል።"
+      },
+      {
+        id: "social",
+        category: "social",
+        tagEn: "Education & Health",
+        tagAm: "ትምህርት እና ጤና",
+        titleEn: "Quality Public Education & Universal Care",
+        titleAm: "ጥራት ያለው የሕዝብ ትምህርት እና ጤና",
+        summaryEn: "Expanding equitable schools, technical training, and accessible primary healthcare across urban and rural areas.",
+        summaryAm: "በከተማ እና በገጠር ፍትሐዊ ትምህርት ቤቶችን፣ የቴክኒክ ሥልጠናን እና ተደራሽ የመጀመሪያ ደረጃ ጤና አገልግሎትን ማስፋፋት።",
+        detailEn: "Investing in teachers, science and vocational skills, and community clinics builds human capital and broadens opportunity for families across every generation.",
+        detailAm: "በመምህራን፣ በሳይንስ እና በሙያ ክህሎት እንዲሁም በጤና ጣቢያዎች ላይ ማስተዋወር ለሁሉም ቤተሰቦች እኩል የዕድል በር ይከፍታል።"
+      },
+      {
+        id: "peace",
+        category: "peace",
+        tagEn: "Peace & Diplomacy",
+        tagAm: "ሰላም እና ዲፕሎማሲ",
+        titleEn: "Inclusive Peace & Principled Diplomacy",
+        titleAm: "አካታች ሰላም እና ርቱዕ ዲፕሎማሲ",
+        summaryEn: "Advancing credible conflict resolution, community healing, and sovereign regional cooperation.",
+        summaryAm: "ተአማኒ የግጭት አፈታትን፣ የማኅበረሰብ መፈወስን እና ሉዓላዊ የቀጣና ትብብርን ማራመድ።",
+        detailEn: "Lasting stability requires inclusive dialogue among all stakeholders, protection of civilians, and constructive regional diplomacy anchored in mutual respect.",
+        detailAm: "ዘላቂ መረጋጋት በሁሉም ወገኖች መካከል የሚካሄድ አካታች ውይይትን፣ የሲቪሎች ጥበቃን እና በመከባበር ላይ የተመሠረተ የቀጣና ዲፕሎማሲን ይጠይቃል።"
+      },
+      {
+        id: "rights",
+        category: "governance",
+        tagEn: "Governance",
+        tagAm: "አስተዳደር እና ሕግ",
+        titleEn: "Women & Youth Empowerment",
+        titleAm: "የሴቶች እና የወጣቶች ተሳትፎ",
+        summaryEn: "Ensuring meaningful representation of women and young citizens in public life and decision-making.",
+        summaryAm: "ሴቶች እና ወጣቶች በሕዝባዊ አመራር እና በውሳኔ አሰጣጥ ላይ ትርጉም ያለው ተሳትፎ እንዲኖራቸው ማረጋገጥ።",
+        detailEn: "We support concrete pathways to leadership, entrepreneurship, and civic voice for women and youth throughout Ethiopia and the diaspora.",
+        detailAm: "በሀገር ውስጥም በውጭም ለሴቶች እና ለወጣቶች የአመራር፣ የሥራ ፈጠራ እና የዜግነት ተሳትፎ ዕድሎችን እናሰፋለን።"
+      },
+      {
+        id: "env",
+        category: "economy",
+        tagEn: "Economy & Energy",
+        tagAm: "ኢኮኖሚ እና ኃይል",
+        titleEn: "Environmental Stewardship & Climate Resilience",
+        titleAm: "የአካባቢ ጥበቃ እና የአየር ንብረት መቋቋም",
+        summaryEn: "Protecting watersheds, soil health, forests, and urban environments for future generations.",
+        summaryAm: "ተፋሰሶችን፣ የአፈር ለምነትን፣ ደኖችን እና የከተማ አካባቢን ለትውልድ መጠበቅ።",
+        detailEn: "Sustainable land management, clean water access, and climate adaptation protect rural livelihoods and urban livability alike.",
+        detailAm: "ዘላቂ የመሬት አያያዝ፣ የንጹሕ ውኃ ተደራሽነት እና የአየር ንብረት መላመድ የገጠር ኑሮን እና የከተማ ምቹነትን ይጠብቃሉ።"
+      }
+    ];
+
+    const eras = [
+      {
+        id: "1972",
+        yearEn: "1972",
+        yearAm: "1964/1972",
+        nameEn: "Founding & Democratic Vision",
+        nameAm: "ምሥረታ እና የዴሞክራሲ ራዕይ",
+        descEn: "Founded in 1972 by students, workers, intellectuals, and activists seeking democratic governance, land reform, and social justice in Ethiopia.",
+        descAm: "በ1964 ዓ.ም. (እ.ኤ.አ. 1972) በተማሪዎች፣ በሠራተኞች፣ በምሁራን እና በታጋዮች ለዴሞክራሲያዊ አስተዳደር፣ ለመሬት ለውጥ እና ለማኅበራዊ ፍትሕ ተመሠረተ።",
+        itemsEn: [
+          "Emergence of a broad-based democratic and social justice movement",
+          "Advocacy for constitutional rights and popular sovereignty",
+          "Deep roots in civic organizing and public debate"
+        ],
+        itemsAm: [
+          "ሰፊ የዴሞክራሲ እና የማኅበራዊ ፍትሕ እንቅስቃሴ መጀመር",
+          "የሕገ-መንግሥታዊ መብቶች እና የሕዝብ ሉዓላዊነት ጥያቄ",
+          "በሕዝባዊ አደረጃጀት እና በፖለቲካዊ ውይይት የጠነከረ መሠረት"
+        ]
+      },
+      {
+        id: "struggle",
+        yearEn: "1970s–1980s",
+        yearAm: "1970ዎቹ – 1980ዎቹ",
+        nameEn: "Endurance & Sacrifice",
+        nameAm: "ጽናት እና መስዋዕትነት",
+        descEn: "A period of severe repression, heavy losses, and resilient survival as members and supporters defended ideals of freedom and human dignity.",
+        descAm: "አባላት እና ደጋፊዎች ለነፃነት እና ለሰብአዊ ክብር የቆሙበት፣ ከባድ መከራ እና መስዋዕትነት የተከፈለበት ወቅት።",
+        itemsEn: [
+          "Honoring the memory of fallen comrades and families",
+          "Preserving democratic principles under adversity",
+          "Sustaining solidarity across generations and borders"
+        ],
+        itemsAm: [
+          "የሰማዕታት እና የቤተሰቦቻቸውን መስዋዕትነት ማክበር",
+          "በከባድ ፈተና ውስጥ የዴሞክራሲ መርሆችን መጠበቅ",
+          "በትውልዶች እና በድንበር መካከል ትስስርን ማቆየት"
+        ]
+      },
+      {
+        id: "transition",
+        yearEn: "1991–2010s",
+        yearAm: "1991 – 2010ዎቹ",
+        nameEn: "Coalitions & Constitutional Debate",
+        nameAm: "ጥምረቶች እና የሕገ-መንግሥት ክርክር",
+        descEn: "Engagement in multi-party politics, opposition coalitions, and principled debates over federalism, citizenship, and peaceful change.",
+        descAm: "በባለብዙ ፓርቲ ፖለቲካ፣ በተቃዋሚ ጥምረቶች እና በፌዴራሊዝም፣ በዜግነት እና በሰላማዊ ለውጥ ላይ የተደረጉ ክርክሮች።",
+        itemsEn: [
+          "Participation in opposition coalitions and civic forums",
+          "Advocating equal individual and group rights balance",
+          "Promoting non-violent political competition"
+        ],
+        itemsAm: [
+          "በተቃዋሚ ጥምረቶች እና በሲቪክ መድረኮች ተሳትፎ",
+          "የግለሰብ እና የቡድን መብቶች ሚዛን እንዲጠበቅ መሟገት",
+          "ሰላማዊ የፖለቲካ ፉክክርን ማበረታታት"
+        ]
+      },
+      {
+        id: "today",
+        yearEn: "2020s & Beyond",
+        yearAm: "2020ዎቹ እና ወደፊት",
+        nameEn: "Renewal for a Modern Republic",
+        nameAm: "ለዘመናዊ ሪፐብሊክ መታደስ",
+        descEn: "Focusing on institutional reform, national reconciliation, economic modernization, and engaging young citizens and the diaspora.",
+        descAm: "በተቋማዊ ማሻሻያ፣ በብሔራዊ እርቅ፣ በኢኮኖሚ ዘመናዊነት እና በወጣቶችና በዳያስፖራ ተሳትፎ ላይ ማተኮር።",
+        itemsEn: [
+          "Practical 2026 policy proposals for governance and energy",
+          "Bridging domestic realities and diaspora civic engagement",
+          "Building transparent, accountable democratic institutions"
+        ],
+        itemsAm: [
+          "ለአስተዳደር እና ለኃይል የሚሆኑ ተግባራዊ የ2026 የፖሊሲ ሐሳቦች",
+          "የሀገር ውስጥ ሁኔታን እና የዳያስፖራ ተሳትፎን ማስተሳሰር",
+          "ግልጽ እና ተጠያቂ የዴሞክራሲ ተቋማትን መገንባት"
+        ]
+      }
+    ];
+
+    const newsItems = [
+      {
+        type: "statement",
+        dateEn: "November 2026",
+        dateAm: "ኅዳር 2019 ዓ.ም.",
+        badgeEn: "Statement",
+        badgeAm: "መግለጫ",
+        titleEn: "Call for Inclusive Dialogue and Protection of Civic Space",
+        titleAm: "ለአካታች ውይይት እና ለሲቪክ ምኅዳር ጥበቃ የቀረበ ጥሪ",
+        bodyEn: "EPRP reiterates that sustainable national stability requires open dialogue, respect for human rights, and credible institutions trusted by all citizens."
+      },
+      {
+        type: "policy",
+        dateEn: "October 2026",
+        dateAm: "ጥቅምት 2019 ዓ.ም.",
+        badgeEn: "Policy Brief",
+        badgeAm: "የፖሊሲ ማስታወሻ",
+        titleEn: "2026 Economic & Clean Energy Framework Released",
+        titleAm: "የ2026 የኢኮኖሚ እና የንጹሕ ኃይል ማዕቀፍ ይፋ ተደረገ",
+        bodyEn: "A practical policy note outlining steps for reliable power access, agricultural productivity, and transparent public investment."
+      },
+      {
+        type: "statement",
+        dateEn: "September 2026",
+        dateAm: "መስከረም 2019 ዓ.ም.",
+        badgeEn: "Statement",
+        badgeAm: "መግለጫ",
+        titleEn: "Strengthening Local Governance and Youth Leadership",
+        titleAm: "የአካባቢ አስተዳደርን እና የወጣቶች አመራርን ማጠናከር",
+        bodyEn: "Empowering local communities and young professionals is essential to accountable service delivery and democratic renewal."
+      }
+    ];
+
+    let currentLang = "en";
+    let currentPolicyFilter = "all";
+    let currentNewsFilter = "all";
+    let currentEraId = "1972";
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang === "am" ? "am" : "en";
+
+      document.querySelectorAll(".lang-btn").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+      });
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      renderPolicies();
+      renderTimelineTabs();
+      renderTimelinePanel();
+      renderNews();
+    }
+
+    function renderPolicies() {
+      const grid = document.getElementById("policyGrid");
+      const filtered = currentPolicyFilter === "all"
+        ? policies
+        : policies.filter((p) => p.category === currentPolicyFilter);
+
+      grid.innerHTML = filtered.map((item) => {
+        const title = currentLang === "am" ? item.titleAm : item.titleEn;
+        const summary = currentLang === "am" ? item.summaryAm : item.summaryEn;
+        const tag = currentLang === "am" ? item.tagAm : item.tagEn;
+        const cta = translations[currentLang].readBrief;
+        return `
+          <article class="card">
+            <div>
+              <span class="card-tag">${tag}</span>
+              <h3>${title}</h3>
+              <p>${summary}</p>
+            </div>
+            <button type="button" class="text-link" data-policy-id="${item.id}">${cta}</button>
+          </article>
+        `;
+      }).join("");
+
+      grid.querySelectorAll("[data-policy-id]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = policies.find((p) => p.id === btn.dataset.policyId);
+          if (!item) return;
+          openModal(
+            currentLang === "am" ? item.titleAm : item.titleEn,
+            `<p>${currentLang === "am" ? item.detailAm : item.detailEn}</p>`
+          );
+        });
+      });
+    }
+
+    function renderTimelineTabs() {
+      const tabsEl = document.getElementById("timelineTabs");
+      tabsEl.innerHTML = eras.map((era) => {
+        const active = era.id === currentEraId ? "active" : "";
+        return `
+          <button type="button" class="era-tab ${active}" data-era="${era.id}">
+            <span class="era-year">${currentLang === "am" ? era.yearAm : era.yearEn}</span>
+            <span class="era-name">${currentLang === "am" ? era.nameAm : era.nameEn}</span>
+          </button>
+        `;
+      }).join("");
+
+      tabsEl.querySelectorAll(".era-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          currentEraId = tab.dataset.era;
+          renderTimelineTabs();
+          renderTimelinePanel();
+        });
+      });
+    }
+
+    function renderTimelinePanel() {
+      const panel = document.getElementById("timelinePanel");
+      const era = eras.find((e) => e.id === currentEraId) || eras[0];
+      const title = currentLang === "am" ? era.nameAm : era.nameEn;
+      const year = currentLang === "am" ? era.yearAm : era.yearEn;
+      const desc = currentLang === "am" ? era.descAm : era.descEn;
+      const points = currentLang === "am" ? era.itemsAm : era.itemsEn;
+
+      panel.innerHTML = `
+        <div style="font-size: 0.85rem; font-weight: 700; color: var(--eth-green); margin-bottom: 4px;">${year}</div>
+        <h3>${title}</h3>
+        <p>${desc}</p>
+        <div class="timeline-highlights">
+          ${points.map((pt) => `<div class="highlight-item">${pt}</div>`).join("")}
+        </div>
+      `;
+    }
+
+    function renderNews() {
+      const list = document.getElementById("newsList");
+      const items = currentNewsFilter === "all"
+        ? newsItems
+        : newsItems.filter((n) => n.type === currentNewsFilter);
+
+      list.innerHTML = items.map((n) => `
+        <article class="news-item">
+          <div class="news-meta">
+            <span class="news-badge">${currentLang === "am" ? n.badgeAm : n.badgeEn}</span>
+            <span>${currentLang === "am" ? n.dateAm : n.dateEn}</span>
+          </div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 6px;">${currentLang === "am" ? n.titleAm : n.titleEn}</h3>
+          <p style="font-size: 0.92rem; color: var(--text-secondary);">${n.bodyEn}</p>
+        </article>
+      `).join("");
+    }
+
+    function openModal(title, htmlContent) {
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalBody").innerHTML = htmlContent;
+      document.getElementById("infoModal").classList.add("open");
+    }
+
+    function closeModal() {
+      document.getElementById("infoModal").classList.remove("open");
+    }
+
+    function openSupportModal() {
+      const title = currentLang === "am" ? "የሲቪክ ድጋፍ እና መዋጮ" : "Civic Support & Contributions";
+      const body = currentLang === "am"
+        ? "<p>በሕጋዊ እና ግልጽ የፋይናንስ ሥርዓት መሠረት የፓርቲውን የፖሊሲ ጥናት፣ የሕዝብ ውይይት እና የትምህርት ሥራዎች መደገፍ ይችላሉ። ከይፋዊ ስርጭት በፊት የተረጋገጠ የባንክ ወይም የክፍያ መረጃ ያስገቡ።</p>"
+        : "<p>Supporters can contribute toward policy research, civic forums, and educational outreach through transparent, lawful channels. Replace this placeholder notice with verified official account details before public launch.</p>";
+      openModal(title, body);
+    }
+
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", () => applyLanguage(btn.dataset.lang));
+    });
+
+    document.querySelectorAll("#policyFilters .filter-pill").forEach((pill) => {
+      pill.addEventListener("click", () => {
+        document.querySelectorAll("#policyFilters .filter-pill").forEach((p) => p.classList.remove("active"));
+        pill.classList.add("active");
+        currentPolicyFilter = pill.dataset.filter;
+        renderPolicies();
+      });
+    });
+
+    document.querySelectorAll("#newsFilters .filter-pill").forEach((pill) => {
+      pill.addEventListener("click", () => {
+        document.querySelectorAll("#newsFilters .filter-pill").forEach((p) => p.classList.remove("active"));
+        pill.classList.add("active");
+        currentNewsFilter = pill.dataset.newsFilter;
+        renderNews();
+      });
+    });
+
+    document.querySelectorAll(".rsvp-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const rsvpBox = document.getElementById("rsvpBox");
+        document.getElementById("rsvpEventName").value = btn.dataset.event;
+        document.getElementById("rsvpStatus").classList.remove("show");
+        rsvpBox.style.display = "block";
+        rsvpBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    });
+
+    document.getElementById("rsvpForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("rsvpName").value.trim();
+      const status = document.getElementById("rsvpStatus");
+      status.textContent = currentLang === "am"
+        ? `አመሰግናለን ${name} — የመድረክ ምዝገባ ጥያቄዎ በአሳሽዎ ተመዝግቧል። ኦፊሴላዊ መዝገብ ለማገናኘት ቅጹን ከቅጽ አገልግሎት ጋር ያያይዙ።`
+        : `Thank you, ${name} — your RSVP details have been captured in this preview. Connect a form endpoint to receive submissions by email or spreadsheet.`;
+      status.classList.add("show");
+      e.target.reset();
+    });
+
+    document.getElementById("membershipForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("memberName").value.trim();
+      const status = document.getElementById("memberStatus");
+      status.textContent = currentLang === "am"
+        ? `አመሰግናለን ${name} — የአባልነት/የበጎ ፈቃድ ማመልከቻዎ ተቀባይነት አግኝቷል። (ቀጥታ መልዕክት ለመቀበል የቅጽ አገልግሎት ያገናኙ።)`
+        : `Thank you, ${name} — your interest submission has been recorded in this preview. Connect a form service to route applications to your organizing team.`;
+      status.classList.add("show");
+      e.target.reset();
+    });
+
+    document.getElementById("mobileMenuBtn").addEventListener("click", () => {
+      document.getElementById("mobileDrawer").classList.toggle("open");
+    });
+
+    document.querySelectorAll("#mobileDrawer a").forEach((link) => {
+      link.addEventListener("click", () => {
+        document.getElementById("mobileDrawer").classList.remove("open");
+      });
+    });
+
+    document.getElementById("openDonateHeader").addEventListener("click", openSupportModal);
+    document.getElementById("openDonateMobile").addEventListener("click", openSupportModal);
+    document.getElementById("openDonateFooter").addEventListener("click", openSupportModal);
+    document.getElementById("closeModal").addEventListener("click", closeModal);
+    document.getElementById("infoModal").addEventListener("click", (e) => {
+      if (e.target.id === "infoModal") closeModal();
+    });
+
+    applyLanguage("en");
+  </script>
+</body>
+</html>
